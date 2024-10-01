@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Food</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showRecipe() {
+            const recipeOutput = document.getElementById('recipe');
+            const selectedFood = document.getElementById('food-options').value;
+
+            let recipeText = '';
+
+            if (selectedFood === 'Dosa') {
+                recipeText = 'Dosa is a traditional South Indian dish made from a fermented batter of rice and urad dal (split black gram). To prepare it, start by soaking 2 cups of rice and 1 cup of urad dal separately for 4-6 hours. After soaking, grind them together to form a smooth batter, adding water as needed. Allow the batter to ferment overnight or for 8-12 hours in a warm place until it doubles in size. Once fermented, mix the batter well and add salt to taste. Heat a non-stick pan or a griddle, pour a ladle of batter, and spread it in a circular motion to form a thin crepe. Drizzle a little oil around the edges and cook until golden brown and crispy. Flip and cook the other side for a minute if needed. Serve hot with coconut chutney and sambar.';
+            } else if (selectedFood === 'Idli') {
+                recipeText = 'Idli is a soft, steamed rice cake popular in South Indian cuisine. To prepare idli, soak 2 cups of rice and 1 cup of urad dal (split black gram) separately for 4-6 hours. Once soaked, grind the urad dal into a smooth paste, then grind the rice into a coarse paste, adding water as needed. Combine both pastes to form a batter, add salt, and let it ferment overnight or for 8-12 hours until it rises and becomes airy. After fermentation, stir the batter gently. Grease idli molds, pour the batter into the molds, and steam for 10-15 minutes until a toothpick inserted comes out clean. Remove the idlis from the molds and serve hot with chutney and sambar.';
+            } else if (selectedFood === 'Sambar') {
+                recipeText = 'Sambar is a flavorful South Indian lentil stew made with toor dal (split pigeon peas) and a variety of vegetables. To prepare, first, cook 1 cup of toor dal in a pressure cooker with 2-3 cups of water until soft, then mash it well. In a pan, heat oil and sauté mustard seeds, curry leaves, dried red chilies, and asafoetida. Add chopped onions, tomatoes, and vegetables like carrots, drumsticks, and eggplant, and cook for a few minutes. Add tamarind pulp, 1-2 tablespoons of sambar powder, salt, and water. Let it simmer until the vegetables are tender. Finally, mix in the mashed dal, bring it to a boil, and adjust the seasoning. Garnish with fresh coriander leaves and serve hot with rice, idli, or dosa.';
+            } else {
+                recipeText = 'Please select a food item to see the recipe.';
+            }
+
+            recipeOutput.innerText = recipeText;
+        }
+    </script>
+</head>
+<body>
+    <h1>South Indian Food</h1>
+    <div id="recipe-section">
+        <label for="food-options">Select a South Indian Food:</label><br><br>
+        <select id="food-options" onchange="showRecipe()">
+            <option value="">-- Select Food --</option>
+            <option value="Dosa">Dosa</option>
+            <option value="Idli">Idli</option>
+            <option value="Sambar">Sambar</option>
+        </select>
+        <br>
+        <br>
+
+        <div id="recipe">select a food recipe to display procedure</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengali Food</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showRecipe() {
+            const recipeOutput = document.getElementById('recipe');
+            const selectedFood = document.getElementById('food-options').value;
+            let recipeText = '';
+            if (selectedFood === 'Rasgulla') {
+                recipeText = 'Rasgulla is a famous Bengali sweet made from soft, spongy balls of chenna (Indian cottage cheese) soaked in sugar syrup. To prepare, begin by boiling 1 liter of milk. Once it starts boiling, add 2 tablespoons of lemon juice or vinegar to curdle the milk. Strain the curdled milk (chenna) through a muslin cloth and rinse it under cold water to remove the lemony taste. Hang the cloth for about 30 minutes to drain excess water. Knead the chenna until smooth and soft, then shape it into small, smooth balls. In a separate pot, prepare sugar syrup by boiling 1 cup of sugar with 4 cups of water. Once boiling, gently drop the chenna balls into the syrup and cook covered on medium heat for 15-20 minutes, allowing the balls to double in size. Let the rasgullas cool in the syrup and serve chilled.';
+            } else if (selectedFood === 'Fish Curry') {
+                recipeText = 'Bengali Fish Curry, also known as Macher Jhol, is a flavorful and aromatic dish. To prepare, marinate 500g of fish (such as Rohu or Catla) with turmeric and salt, then lightly fry the pieces in mustard oil until golden. In the same pan, heat more mustard oil and add panch phoron (a Bengali five-spice blend), followed by sliced onions, ginger, and garlic. Sauté until golden, then add chopped tomatoes and cook until soft. Add turmeric, cumin, coriander powder, and red chili powder, along with some water to create a gravy. Simmer the gravy for 10 minutes, then add the fried fish pieces and let them cook in the sauce for another 10 minutes until tender. Garnish with fresh coriander and serve hot with steamed rice.';
+            } else if (selectedFood === 'Mishti Doi') {
+                recipeText = 'Mishti Doi is a traditional Bengali sweetened yogurt dessert that is creamy and delicious. To prepare, start by boiling 1 liter of full-fat milk and simmer it until it reduces to about half its original volume, stirring frequently to prevent burning. Once thickened, add 100g of sugar and mix until dissolved. Allow the mixture to cool to a warm temperature. In a separate bowl, take 2-3 tablespoons of plain yogurt (with live cultures) and whisk it until smooth. Gradually mix the warm milk into the yogurt, stirring gently to combine. Pour the mixture into earthen pots or bowls and cover them with a lid or cloth. Let the pots sit in a warm place for 6-8 hours to ferment until set. Once set, refrigerate the Mishti Doi for a few hours before serving. It can be garnished with a sprinkle of grated pistachios or almonds for added texture and flavor. Enjoy this delightful dessert chilled!';
+            } else {
+                recipeText = 'Please select a food item to see the recipe.';
+            }
+            recipeOutput.innerText = recipeText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bengali Food</h1>
+    <div id="recipe-section">
+        <label for="food-options">Select a Bengali Food:</label>
+        <select id="food-options" onchange="showRecipe()">
+            <option value="">-- Select Food --</option>
+            <option value="Rasgulla">Rasgulla</option>
+            <option value="Fish Curry">Fish Curry</option>
+            <option value="Mishti Doi">Mishti Doi</option>
+        </select>
+        <br><br>
+        <div id="recipe">select a recipe to display the procedure</div>
+    </div>
+</body>
+</html>
