@@ -5,25 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Indian Food</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function showRecipe() {
-            const recipeOutput = document.getElementById('recipe');
-            const selectedFood = document.getElementById('food-options').value;
-
-            let recipeText = '';
-
-            if (selectedFood === 'Butter Chicken') {
-                recipeText = 'Butter Chicken, also known as Murgh Makhani, is a rich and creamy North Indian dish. To prepare, first marinate 500g of boneless chicken in a mixture of yogurt, 1 tablespoon ginger-garlic paste, 1 tablespoon red chili powder, 1 teaspoon turmeric, and salt. Let it sit for at least 1 hour. In a hot pan, grill the marinated chicken until slightly charred, then set it aside. In the same pan, heat butter and sauté chopped onions, ginger, garlic, and green chilies until golden. Add 2-3 chopped tomatoes and cook until soft. Blend this mixture into a smooth puree. Return it to the pan, add 1 tablespoon of garam masala, 1 tablespoon of cumin powder, and 1 tablespoon of red chili powder. Pour in cream and a little water to create a thick sauce. Add the grilled chicken pieces, mix well, and simmer for 10 minutes. Garnish with fresh cream and coriander leaves, and serve hot with naan or rice.';
-            } else if (selectedFood === 'Palak Paneer') {
-                recipeText = 'Palak Paneer is a popular North Indian dish made with spinach (palak) and paneer (Indian cottage cheese). To prepare, start by blanching a bunch of spinach leaves in boiling water for 2-3 minutes, then transfer them to ice water to retain their vibrant green color. Blend the spinach into a smooth puree and set aside. In a pan, heat oil and sauté cumin seeds, chopped onions, ginger, garlic, and green chilies until golden. Add chopped tomatoes and cook until soft. Stir in 1 teaspoon of turmeric, 1 teaspoon of cumin powder, and 1 teaspoon of garam masala. Add the spinach puree and cook for a few minutes. Cube 200g of paneer and lightly fry or add it directly into the spinach gravy. Stir gently and cook for another 5 minutes, adjusting salt and consistency as needed. Finish with a splash of cream for richness. Serve hot with roti, naan, or rice.';
-            } else if (selectedFood === 'Chole') {
-                recipeText = 'Chole, also known as Chana Masala, is a flavorful North Indian dish made with chickpeas. To prepare, soak 1 cup of dried chickpeas overnight, then pressure cook them with water until tender. In a pan, heat oil and sauté cumin seeds, chopped onions, ginger, and garlic until golden brown. Add chopped tomatoes and cook until soft. Stir in 1 tablespoon of chole masala, 1 teaspoon of cumin powder, 1 teaspoon of coriander powder, 1/2 teaspoon of turmeric, and red chili powder. Cook the spices for a few minutes, then add the cooked chickpeas along with their cooking water. Simmer the mixture, mashing a few chickpeas to thicken the gravy. Add salt to taste and a squeeze of lemon juice for extra flavor. Garnish with fresh coriander and serve hot with bhature, puri, or rice.';
-            } else {
-                recipeText = 'Please select a food item to see the recipe.';
-            }
-            recipeOutput.innerText = recipeText;
-        }
-    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>North Indian Food</h1>
@@ -35,8 +17,7 @@
             <option value="Palak Paneer">Palak Paneer</option>
             <option value="Chole">Chole</option>
         </select><br><br>
-
-        <div id="recipe">select a food rcipe to display procedure</div>
+        <div id="recipe">select a food recipe to display procedure</div>
     </div>
 </body>
 </html>
